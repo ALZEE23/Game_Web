@@ -19,7 +19,7 @@ export default function Home() {
         <div className="absolute top-0">
           <Navbar />
 
-          <div className="w-screen h-screen md:block pt-40 justify-between flex flex-col md:justify-normal md:space-y-72">
+          <div className="w-screen h-screen md:block pt-40 justify-between flex flex-col md:">
             <div className="md:space-y-8">
               <div className="px-10 md:h-40">
                 <h1 className="font-staatliches font-bold md:text-10xl text-6xl  text-left text-[#DFDFF2] tracking-tighter">
@@ -48,8 +48,8 @@ export default function Home() {
         <div className="w-screen h-screen bg-[#FAF4ED] md:hidden inline-block md:mb-0 mb-10">
           <div className="flex">
             <div className="md:w-20 w-3 h-[70vh] mx-10 mt-20 bg-[#21201F]"></div>
-            <div className="w-full  py-20 inline-block">
-              <h1 className="md:text-8xl text-4xl text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-fit tracking-tighter bg-[#21201F]">
+            <div className="w-full  py-20 inline-block mx-auto">
+              <h1 className="md:text-8xl text-4xl mx-10 text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-fit tracking-tighter bg-[#21201F]">
                 Meet The Team
               </h1>
             </div>
@@ -71,14 +71,14 @@ export default function Home() {
         </div>
 
         {/* Section Desktop */}
-        <div className="w-screen h-screen bg-[#FAF4ED] md:flex hidden">
-          <div className="md:w-20 w-3 h-screen mx-10 mt-20 bg-[#21201F]"></div>
+        <div className="w-screen h-[110vh] bg-[#FAF4ED] md:flex md:mb-20 hidden">
+          <div className="md:w-20 w-3 h-[110vh] mx-10 mt-20 bg-[#21201F]"></div>
           <div className="w-full px-10 py-20 inline-block">
             <h1 className="md:text-8xl text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-fit tracking-tighter bg-[#21201F]">
               Meet The Team
             </h1>
           </div>
-          <div className="md:w-[50rem] mt-20 mx-10 bg-[#21201F] space-y-24 inline-block">
+          <div className="md:w-[50rem] h-fit mt-20 mx-10 bg-[#21201F] space-y-24 inline-block">
             <h1 className="font-mono tracking-tighter font-semibold text-[#DFDFF2] text-center md:text-5xl mt-16">
               ABOUT
             </h1>
@@ -95,8 +95,8 @@ export default function Home() {
 
       {/* Section CARD */}
       <section>
-        <div className="w-full md:h-[30rem] h-24 bg-[#B0B0B0] md:mt-0 mt-60">
-          <h1 className="font-staatliches text-8xl md:text-11xl md:mx-0 mx-9 text-[#21201F]">
+        <div className="w-full md:h-[30rem] h-24 bg-[#B0B0B0] md:mt-0 mt-60 flex md:overflow-x-hidden">
+          <h1 className="font-staatliches text-8xl md:text-11xl md:mx-7 mx-9 text-[#21201F]">
             G<span className="bg-[#FAF4ED]">AMING</span>
           </h1>
         </div>
