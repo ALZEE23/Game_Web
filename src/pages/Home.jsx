@@ -78,7 +78,7 @@ export default function Home() {
               Meet The Team
             </h1>
           </div>
-          <div className="md:w-[50rem] h-fit mt-20 mx-10 bg-[#21201F] space-y-24 inline-block">
+          <div className="md:w-[50rem] h-fit mt-20 mx-10 bg-[#21201F] space-y-24 inline-block pb-10">
             <h1 className="font-mono tracking-tighter font-semibold text-[#DFDFF2] text-center md:text-5xl mt-16">
               ABOUT
             </h1>
@@ -117,6 +117,12 @@ export default function Home() {
             <div className="w-full h-[47%] bg-[#EDFF66]"></div>
             <div className="w-full h-[47%] bg-[#EDFF66]"></div>
           </div>
+        </div>
+      </section>
+
+      <section id="footer">
+        <div className="flex flex-col grid-cols-3 h-screen w-screen">
+          
         </div>
       </section>
     </>
