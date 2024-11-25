@@ -6,7 +6,7 @@ export default function Navbar() {
       {/* Icon and game button */}
       <div className="flex justify-between space-x-16">
         <img className="w-10 h-10 sm:w-12 sm:h-12" src={incommodious} />
-        <div className="bg-[#DFDFF2] w-28 h-10 my-auto flex content-center sm:flex hidden">
+        <div className="bg-[#DFDFF2] w-28 h-10 my-auto content-center sm:flex hidden">
           <h1 className="font-semibold sm:text-sm font-mono hidden sm:flex sm:mx-auto sm:text-black sm:self-center sm:my-1  text-[#DFDFF2] ">
             PRODUCTS
           </h1>
