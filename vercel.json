@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/"
+    },
+    {
+      "src": "/home",
+      "dest": "/"
+    },
+    {
+      "src": "/admin",
+      "dest": "/"
+    },
+    {
+      "src": "/game",
+      "dest": "/"
+    }
+  ]
+}
