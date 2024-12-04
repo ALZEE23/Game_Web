@@ -33,8 +33,8 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" md:h-40 h-fit  w-fit md:float-end float-end md:mb-0 mb-0 content-center">
-              <h1 className="font-staatliches font-bold md:text-10xl text-6xl text-center bg-[#FAF4ED] md:w-[40rem] w-full  text-[#21201F] tracking-tighter">
+            <div className=" md:h-40 h-fit md:absolute md:bottom-5 md:right-0  w-fit md:float-end float-end md:mb-0 mb-0 content-center">
+              <h1 className="font-staatliches font-bold md:text-10xl text-6xl text-center bg-[#FAF4ED] md:w-[40rem] px-5 sm:px-0 w-full  text-[#21201F] tracking-tighter">
                 STUDIO
               </h1>
             </div>
@@ -47,9 +47,8 @@ export default function Home() {
         {/* Section Mobile */}
         <div className="w-screen h-screen bg-[#FAF4ED] md:hidden inline-block md:mb-0 mb-10">
           <div className="flex">
-            <div className="md:w-20 w-3 h-[70vh] mx-10 mt-20 bg-[#21201F]"></div>
-            <div className="w-full  py-20 inline-block mx-auto">
-              <h1 className="md:text-8xl text-4xl mx-10 text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-fit tracking-tighter bg-[#21201F]">
+            <div className="w-full  py-20 inline-block mx-10">
+              <h1 className="md:text-8xl text-4xl text-center mx-auto text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-full tracking-tighter bg-[#21201F]">
                 Meet The Team
               </h1>
             </div>
@@ -67,7 +66,7 @@ export default function Home() {
               Incommodious Studio in 2024.{" "}
             </h1>
           </div>
-          <div className="md:w-20 w-[0.70rem] h-[14vh] mx-10 mt-10 bg-[#21201F]"></div>
+          <div className="md:w-20 w-[0.70rem] hidden sm:inline-block h-[14vh] mx-10 mt-10 bg-[#21201F]"></div>
         </div>
 
         {/* Section Desktop */}
@@ -122,7 +121,7 @@ export default function Home() {
 
       <section id="footer">
         <div className="flex flex-col grid-cols-3 h-screen w-screen">
-          
+
         </div>
       </section>
     </>
