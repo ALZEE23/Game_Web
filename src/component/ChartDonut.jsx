@@ -5,7 +5,7 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Chart from "react-apexcharts";
-import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
+import { ChartPieIcon } from "@heroicons/react/24/outline";
 
 // If you're using Next.js please use the dynamic import for react-apexcharts and remove the import from the top for the react-apexcharts
 // import dynamic from "next/dynamic";
@@ -45,7 +45,7 @@ export default function ChartDonut() {
         className="flex flex-col gap-4 rounded-none md:flex-row md:items-center w-[22rem]"
       >
         <div className="w-max  bg-[#21201F] p-5 text-white">
-          <Square3Stack3DIcon className="h-6 w-6" />
+          <ChartPieIcon className="h-6 w-6" />
         </div>
         <div>
           <Typography variant="h6" className="text-[#21201F]">

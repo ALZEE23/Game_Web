@@ -5,7 +5,8 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import Chart from "react-apexcharts";
-import { Square3Stack3DIcon } from "@heroicons/react/24/outline";
+import { PercentBadgeIcon } from "@heroicons/react/24/outline";
+
 
 // If you're using Next.js please use the dynamic import for react-apexcharts and remove the import from the top for the react-apexcharts
 // import dynamic from "next/dynamic";
@@ -17,6 +18,7 @@ const chartConfig = {
   height: 280,
   series: [40],
   options: {
+    labels: ["Progress"],
     radialBar: {
       toolbar: {
         show: false,
@@ -38,7 +40,7 @@ const chartConfig = {
       },
       dataLabels: {
         name: {
-          show: false,
+          show: true,
         },
         value: {
           offsetY: -2,
@@ -74,8 +76,8 @@ export default function ChartSemi() {
         color="transparent"
         className="flex flex-col gap-4 rounded-none md:flex-row md:items-center"
       >
-        <div className="w-max bg-gray-900 p-5 text-white">
-          <Square3Stack3DIcon className="h-6 w-6" />
+        <div className="w-max bg-[#21201F] p-5 text-white">
+          <PercentBadgeIcon className="h-6 w-6" />
         </div>
         <div>
           <Typography variant="h6" color="blue-gray">
@@ -86,7 +88,7 @@ export default function ChartSemi() {
             color="gray"
             className="max-w-sm font-normal"
           >
-            Visualize your data 
+            Visualize your data
           </Typography>
         </div>
       </CardHeader>
