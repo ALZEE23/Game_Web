@@ -71,7 +71,6 @@ export default function Admin() {
           <div className="h-screen pb-10">
             <Table></Table>
           </div>
-
         </div>
       </section>
     </>
