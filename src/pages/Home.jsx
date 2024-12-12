@@ -1,5 +1,6 @@
 import Navbar from "../component/Navbar";
 import teaser from "../assets/Untitled (3840 x 2160 px).mp4";
+import { FaYoutube, FaFacebookSquare, FaInstagramSquare, FaGooglePlay, FaSteam } from "react-icons/fa";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" md:h-40 h-fit md:absolute md:bottom-5 md:right-0  w-fit md:float-end float-end md:mb-0 mb-0 content-center">
+            <div className=" md:h-40 h-fit md:absolute md:bottom-7 md:right-0  w-fit md:float-end float-end md:mb-0 mb-0 content-center">
               <h1 className="font-staatliches font-bold md:text-10xl text-6xl text-center bg-[#FAF4ED] md:w-[40rem] px-5 sm:px-0 w-full  text-[#21201F] tracking-tighter">
                 STUDIO
               </h1>
@@ -94,7 +95,7 @@ export default function Home() {
 
       {/* Section CARD */}
       <section>
-        <div className="w-full md:h-[30rem] h-24 bg-[#B0B0B0] md:mt-0 mt-60 flex md:overflow-x-hidden">
+        <div className="w-full md:h-[30rem] h-24 overflow-hidden bg-[#B0B0B0] md:mt-0 mt-60 flex md:overflow-x-hidden">
           <h1 className="font-staatliches text-8xl md:text-11xl md:mx-7 mx-9 text-[#21201F]">
             G<span className="bg-[#FAF4ED]">AMING</span>
           </h1>
@@ -119,9 +120,52 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="footer">
-        <div className="flex flex-col grid-cols-3 h-screen w-screen">
-
+      <section id="contact">
+        <div className="md:px-40 px-3 h-80 bg-[#FAF4ED]">
+          <div className="inline-block w-full">
+            <div className="mt-8">
+              <h1 className="font-staatliches font-semibold text-xl text-[#21201F]">
+                Follow us on
+              </h1>
+              <div className="md:flex justify-between">
+                <div className="flex items-center space-x-3">
+                  <FaYoutube className="size-12 text-[#21201F]" />
+                  <FaFacebookSquare className="size-10 text-[#21201F]" />
+                  <FaInstagramSquare className="size-10 text-[#21201F]" />
+                </div>
+                <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-2">
+                    <FaGooglePlay className="size-10 text-[#21201F]" />
+                    <h1 className="font-staatliches text-3xl text-[#21201F]">
+                      Google Play
+                    </h1>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <FaSteam className="size-10 text-[#21201F]" />
+                    <h1 className="font-staatliches text-3xl text-[#21201F]">
+                      Steam
+                    </h1>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-[#21201F] w-full h-1 my-2"></div>
+              <div className="md:flex justify-between">
+                <div className="md:w-[25%] ">
+                  <h1 className="font-staatliches">
+                    SMK Negeri 1 Ciomas Jl. Raya Laladon, Kec Ciomas Kab. Bogor,
+                    Jawa Barat
+                  </h1>
+                  <h1 className="font-staatliches">phone: +62251 7520933</h1>
+                  <h1 className="font-staatliches">
+                    Email: smkn1_ciomas@yahoo.co.id
+                  </h1>
+                </div>
+                <div>
+                  <h1 className="font-staatliches text-7xl">PPLG</h1>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </>

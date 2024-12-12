@@ -7,9 +7,9 @@ export default function Navbar() {
       <div className="flex justify-between space-x-16">
         <img className="w-10 h-10 sm:w-12 sm:h-12" src={incommodious} />
         <div className="bg-[#DFDFF2] w-28 h-10 my-auto content-center sm:flex hidden">
-          <h1 className="font-semibold sm:text-sm font-mono hidden sm:flex sm:mx-auto sm:text-black sm:self-center sm:my-1  text-[#DFDFF2] ">
+          <a className="font-semibold sm:text-sm font-mono hidden sm:flex sm:mx-auto sm:text-black sm:self-center sm:my-1  text-[#DFDFF2] " href="/">
             PRODUCTS
-          </h1>
+          </a>
         </div>
       </div>
       {/* Desktop View Navbar Right */}

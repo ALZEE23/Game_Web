@@ -14,32 +14,32 @@ export default function Landing() {
         <div className="fixed w-screen sm:px-40 z-30">
           <div className="sm:flex bg-[#21201F] px-5 py-4 justify-between hidden">
             <div className="flex gap-12 items-center">
-              <h1 className="font-staatliches text-[#DFDFF2] text-4xl ">
+              <a className="font-staatliches text-[#DFDFF2] text-4xl " href="#header">
                 pplg
-              </h1>
+              </a>
               <div className="flex gap-7">
                 <button>
-                  <h1 className="font-mono font-semibold text-[#DFDFF2]">
+                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#game">
                     Games & News
-                  </h1>
+                  </a>
                 </button>
                 <button>
-                  <h1 className="font-mono font-semibold text-[#DFDFF2]">
+                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#about">
                     About
-                  </h1>
+                  </a>
                 </button>
                 <button>
-                  <h1 className="font-mono font-semibold text-[#DFDFF2]">
+                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#contact">
                     Contact
-                  </h1>
+                  </a>
                 </button>
               </div>
             </div>
             <div className="flex justify-center pr-5">
               <button className="bg-[#DFDFF2] px-5">
-                <h1 className="font-mono font-semibold text-[#21201F]">
+                <a className="font-mono font-semibold text-[#21201F]" href="/incommodious">
                   Interested
-                </h1>
+                </a>
               </button>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function Landing() {
         </div>
       </section>
 
-      <section className="">
+      <section id="header">
         <div className="relative">
           <div className="absolute -right-32 scale-150 top-[33rem] hidden md:block -z-10">
             <div className="size-64 rotate-45 pt-9 pl-9 bg-[#21201F]"></div>
@@ -75,7 +75,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="game">
         <div className="relative ">
           <div className="sm:grid-cols-2 gap-8 grid sm:px-40 px-5 w-screen mb-56 ">
             <div className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto">
@@ -122,7 +122,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="about">
         <div className="bg-[#21201F] relative  md:px-40 md:p-10 px-3 md:pb-32 py-10">
           <div className="absolute right-[7.7rem] top-28 hidden md:block">
             <div className="size-64 rotate-45 pt-9 pl-9 bg-[#FAF4ED]">
@@ -145,7 +145,7 @@ export default function Landing() {
           </div>
         </div>
       </section>
-      <section>
+      <section id="contact">
         <div className="md:px-40 px-3 h-80 bg-[#FAF4ED]">
           <div className="inline-block w-full">
             <div className="mt-8">

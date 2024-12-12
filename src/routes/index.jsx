@@ -11,7 +11,7 @@ export default function RoutesIndex() {
       <Route path="/" element={<Landing />} />
       <Route path="/game/" element={<Game />} />
       <Route path="/admin/" element={<Admin />} />
-      <Route path="/home/" element={<Home />} />
+      <Route path="/incommodious/" element={<Home />} />
     </Routes>
   );
 }

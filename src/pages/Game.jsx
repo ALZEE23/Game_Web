@@ -1,9 +1,72 @@
 import CarouselPhoto from "../component/CarouselPhoto";
+import { BiMenu } from "react-icons/bi";
 
 export default function Game() {
   return (
     <>
-      {/* Section Banner*/}
+      <section id="Navbar">
+        <div className="fixed w-screen sm:px-40 z-30">
+          <div className="sm:flex bg-[#21201F] px-5 py-4 justify-between hidden">
+            <div className="flex gap-12 items-center">
+              <a
+                className="font-staatliches text-[#DFDFF2] text-4xl "
+                href="/"
+              >
+                pplg
+              </a>
+              <div className="flex gap-7">
+                <button>
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="/"
+                  >
+                    Games & News
+                  </a>
+                </button>
+                <button>
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="/"
+                  >
+                    About
+                  </a>
+                </button>
+                <button>
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="/"
+                  >
+                    Contact
+                  </a>
+                </button>
+              </div>
+            </div>
+            <div className="flex justify-center pr-5">
+              <button className="bg-[#DFDFF2] px-5">
+                <a
+                  className="font-mono font-semibold text-[#21201F]"
+                  href="/incommodious"
+                >
+                  Interested
+                </a>
+              </button>
+            </div>
+          </div>
+          <div className="sm:hidden bg-[#21201F] px-5 py-4 justify-between flex">
+            <div className="flex gap-12 items-center">
+              <h1 className="font-staatliches text-[#DFDFF2] text-4xl ">
+                pplg
+              </h1>
+            </div>
+            <div className="flex justify-center">
+              <button className="bg-[#DFDFF2] px-5">
+                <BiMenu className="font-semibold text-xl text-[#21201F]"></BiMenu>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="banner">
         <div className="w-screen h-72 bg-black">
           <img src="" alt="" />
