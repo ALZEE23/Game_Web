@@ -1,6 +1,17 @@
 import Navbar from "../component/Navbar";
 import teaser from "../assets/Untitled (3840 x 2160 px).mp4";
-import { FaYoutube, FaFacebookSquare, FaInstagramSquare, FaGooglePlay, FaSteam } from "react-icons/fa";
+import {
+  FaYoutube,
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaGooglePlay,
+  FaSteam,
+} from "react-icons/fa";
+import alfa from "../assets/Alfa-01.png";
+import fai from "../assets/Fai-01.png";
+import jihad from "../assets/Jihad-01.png";
+import raihan from "../assets/Raihan-01.png";
+import naufal from "../assets/Naufal-01.png";
 
 export default function Home() {
   return (
@@ -71,14 +82,21 @@ export default function Home() {
         </div>
 
         {/* Section Desktop */}
-        <div className="w-screen h-[110vh] bg-[#FAF4ED] md:flex md:mb-20 hidden">
-          <div className="md:w-20 w-3 h-[110vh] mx-10 mt-20 bg-[#21201F]"></div>
+        <div className="w-screen h-[120vh] bg-[#FAF4ED] md:flex md:mb-20 hidden">
+          <div className="md:w-20 w-3 h-[120vh] mx-10 mt-20 bg-[#21201F]"></div>
           <div className="w-full px-10 py-20 inline-block">
             <h1 className="md:text-8xl text-[#FAF4ED] px-10 py-1 font-staatliches font-semibold w-fit tracking-tighter bg-[#21201F]">
               Meet The Team
             </h1>
+            <div className="flex-wrap flex">
+              <img src={alfa} alt="" className="w-60" />
+              <img src={fai} alt="" className="w-60" />
+              <img src={jihad} alt="" className="w-60" />
+              <img src={raihan} alt="" className="w-60" />
+              <img src={naufal} alt="" className="w-60" />
+            </div>
           </div>
-          <div className="md:w-[50rem] h-fit mt-20 mx-10 bg-[#21201F] space-y-24 inline-block pb-10">
+          <div className="md:w-[50rem] h-fit mt-20 mx-10 bg-[#21201F] space-y-24 inline-block pb-24">
             <h1 className="font-mono tracking-tighter font-semibold text-[#DFDFF2] text-center md:text-5xl mt-16">
               ABOUT
             </h1>

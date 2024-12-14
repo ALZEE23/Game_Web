@@ -1,6 +1,7 @@
 import {
   MagnifyingGlassIcon,
   ChevronUpDownIcon,
+  TrashIcon,
 } from "@heroicons/react/24/outline";
 import { PencilIcon } from "@heroicons/react/24/solid";
 import {
@@ -35,7 +36,7 @@ const TABS = [
   },
 ];
 
-const TABLE_HEAD = ["Member", "Function", "Status", "Employed", ""];
+const TABLE_HEAD = ["News & Games", "Uploader", "Status", "Date", ""];
 
 const TABLE_ROWS = [
   {
@@ -93,7 +94,7 @@ export default function Table() {
           <div className="w-full md:w-72 m-1">
             <input
               type="text"
-              className="outline-none w-full font-mono"
+              className="outline-none w-full"
               placeholder="Search"
             />
             <div className="w-full h-1 bg-[#21201F]"></div>
@@ -138,9 +139,7 @@ export default function Table() {
                             variant="small"
                             color="blue-gray"
                             className="font-normal"
-                          >
-                            {name}
-                          </Typography>
+                          ></Typography>
                           <Typography
                             variant="small"
                             color="blue-gray"
@@ -174,7 +173,7 @@ export default function Table() {
                         <Chip
                           variant="ghost"
                           size="sm"
-                          value={online ? "online" : "offline"}
+                          value={online ? "on" : "off"}
                           color={online ? "green" : "blue-gray"}
                         />
                       </div>
@@ -189,9 +188,14 @@ export default function Table() {
                       </Typography>
                     </td>
                     <td className={classes}>
-                      <Tooltip content="Edit User">
+                      <Tooltip content="Edit Data">
                         <IconButton variant="text">
                           <PencilIcon className="h-4 w-4" />
+                        </IconButton>
+                      </Tooltip>
+                      <Tooltip content="Delete Data">
+                        <IconButton variant="text">
+                          <TrashIcon className="h-4 w-4" />
                         </IconButton>
                       </Tooltip>
                     </td>
