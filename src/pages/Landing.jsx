@@ -6,30 +6,58 @@ import {
   FaSteam,
 } from "react-icons/fa";
 import { BiMenu } from "react-icons/bi";
+import fetchApk from "../api/ApkLoader";
+import { useEffect, useState } from "react";
 
 export default function Landing() {
+  const [games, setGames] = useState([]);
+
+  useEffect(() => {
+    const getGames = async () => {
+      try {
+        const data = await fetchApk();
+        setGames(data);
+      } catch (error) {
+        console.error("Error fetching games:", error);
+      }
+    };
+
+    getGames();
+  }, []);
   return (
     <>
       <section id="Navbar">
         <div className="fixed w-screen sm:px-40 z-30">
           <div className="sm:flex bg-[#21201F] px-5 py-4 justify-between hidden">
             <div className="flex gap-12 items-center">
-              <a className="font-staatliches text-[#DFDFF2] text-4xl " href="#header">
+              <a
+                className="font-staatliches text-[#DFDFF2] text-4xl "
+                href="#header"
+              >
                 pplg
               </a>
               <div className="flex gap-7">
                 <button>
-                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#game">
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="#game"
+                  >
                     Games & News
                   </a>
                 </button>
                 <button>
-                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#about">
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="#about"
+                  >
                     About
                   </a>
                 </button>
                 <button>
-                  <a className="font-mono font-semibold text-[#DFDFF2]" href="#contact">
+                  <a
+                    className="font-mono font-semibold text-[#DFDFF2]"
+                    href="#contact"
+                  >
                     Contact
                   </a>
                 </button>
@@ -37,7 +65,10 @@ export default function Landing() {
             </div>
             <div className="flex justify-center pr-5">
               <button className="bg-[#DFDFF2] px-5">
-                <a className="font-mono font-semibold text-[#21201F]" href="/incommodious">
+                <a
+                  className="font-mono font-semibold text-[#21201F]"
+                  href="/incommodious"
+                >
                   Interested
                 </a>
               </button>
@@ -78,47 +109,28 @@ export default function Landing() {
       <section id="game">
         <div className="relative ">
           <div className="sm:grid-cols-2 gap-8 grid sm:px-40 px-5 w-screen mb-56 ">
-            <div className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto">
-              <div className="w-full h-[15rem] sm:h-[26rem] bg-black"></div>
-              <div className="">
-                <h1 className="font-mono font-semibold text-center">Lorem</h1>
-                <h1 className="text-center font-semibold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  necessitatibus porro cupiditate.
-                </h1>
+            {games.map((game) => (
+              <div
+                key={game.id}
+                className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto"
+              >
+                <div className="w-full h-[15rem] sm:h-[26rem] bg-black">
+                  <img
+                    src={game.cover}
+                    alt={game.title}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h1 className="font-mono font-semibold text-center">
+                    {game.title}
+                  </h1>
+                  <h1 className="text-center font-semibold">
+                    {game.description}
+                  </h1>
+                </div>
               </div>
-            </div>
-            <div className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto">
-              <div className="w-full h-[15rem] sm:h-[26rem] bg-black"></div>
-              <div className="">
-                <h1 className="font-mono font-semibold text-center">Lorem</h1>
-                <h1 className="text-center font-semibold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  necessitatibus porro cupiditate.
-                </h1>
-              </div>
-            </div>
-            <div className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto">
-              <div className="w-full h-[15rem] sm:h-[26rem] bg-black"></div>
-              <div className="">
-                <h1 className="font-mono font-semibold text-center">Lorem</h1>
-                <h1 className="text-center font-semibold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  necessitatibus porro cupiditate.
-                </h1>
-              </div>
-            </div>
-            <div className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto">
-              <div className="w-full h-[15rem] sm:h-[26rem] bg-black"></div>
-
-              <div className="">
-                <h1 className="font-mono font-semibold text-center">Lorem</h1>
-                <h1 className="text-center font-semibold">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                  necessitatibus porro cupiditate.
-                </h1>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

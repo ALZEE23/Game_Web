@@ -1,8 +1,7 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
+import { API_URL } from '../../.env';
 
-
-const API_URL = ""
 
 const Api = axios.create({
   baseURL: API_URL,
@@ -35,5 +34,7 @@ const Login = async (email, password) => {
   Cookies.set("username", JSON.stringify(response.data.username));
 }
 
-export { SetAuthToken, Login }
+
+
+export { SetAuthToken, Login}
 export default Api
