@@ -56,8 +56,8 @@ export default function Admin() {
               </h1>
             </div>
           </div>
-          <div className="flex gap-5">
-            <form onSubmit={handleApk}>
+          <div>
+            <form onSubmit={handleApk} className="flex gap-5">
               <div className="w-[60%] bg-[#e7e7e7] h-[30rem]  z-10 px-4 py-3">
                 <h1 className="text-[#21201F] text-lg font-mono font-bold">
                   News & Games
@@ -123,7 +123,7 @@ export default function Admin() {
                     <input
                       name="cover"
                       onChange={(e) => setCover(e.target.files[0])}
-                      id="cover"                    
+                      id="cover"
                       type="file"
                       className="outline-none w-[100%] bg-[#21201F] p-2 text-[#e7e7e7] font-mono h-40"
                     />
@@ -141,8 +141,9 @@ export default function Admin() {
                   <div className="grid grid-cols-2 w-full justify-between">
                     <div></div>
                     <button
-                    type="submit"
-                    className="bg-[#21201F] w-24 h-9 font-mono font-semibold text-[#e7e7e7]">
+                      type="submit"
+                      className="bg-[#21201F] w-24 h-9 font-mono font-semibold text-[#e7e7e7]"
+                    >
                       Submit
                     </button>
                   </div>

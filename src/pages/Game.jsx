@@ -1,8 +1,25 @@
 import CarouselPhoto from "../component/CarouselPhoto";
 import { BiMenu } from "react-icons/bi";
-import { FaGooglePlay, FaYoutube, FaFacebookSquare, FaInstagramSquare, FaSteam } from "react-icons/fa";
+import { useState } from "react";
+import { useParams, useLocation } from "react-router-dom";
+import {
+  FaGooglePlay,
+  FaYoutube,
+  FaFacebookSquare,
+  FaInstagramSquare,
+  FaSteam,
+} from "react-icons/fa";
 
 export default function Game() {
+  useParams();
+  const location = useLocation();
+  const [game] = useState(location.state?.game || null);
+  const dataString = game.CreatedAt;
+  const date = new Date(dataString);
+  const dateOnly = date.toISOString().split("T")[0];
+  if (!game) {
+    return <div>Loading...</div>;
+  }
   return (
     <>
       <section id="Navbar">
@@ -72,32 +89,26 @@ export default function Game() {
       </section>
 
       <section id="image">
-        <div className=" md:px-40 space-y-10 py-10 px-3">
+        <div className="md:px-40 space-y-10 py-10 px-3">
           <div className="flex-col">
-            <h1 className="font-staatliches text-lg">Barda - NOV 25,2024 </h1>
-            <h1 className="font-staatliches text-5xl">Barda Demo Release</h1>
+            <h1 className="font-staatliches text-lg">
+              {game.name} - {dateOnly}
+            </h1>
+            <h1 className="font-staatliches text-5xl">{game.title}</h1>
           </div>
           <div className="md:h-screen w-full h-64 bg-black">
-            <img src="" alt="" />
+            <img
+              src={`http://localhost:3000${game.cover}`}
+              alt={game.title}
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="md:px-64 space-y-5">
             <div className="inline-block space-y-1">
-              <h1 className="font-semibold text-xl text italic text">
-                Barda Realese now after a several years
-              </h1>
+              <h1 className="font-semibold text-xl italic">{game.title}</h1>
             </div>
             <div>
-              <h1>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Doloribus, modi enim earum impedit totam consequatur commodi
-                ullam aspernatur labore ea officia, nisi voluptas libero at quos
-                aperiam sit molestiae fugit dicta ut, suscipit dolores molestias
-                sunt veritatis! Beatae, adipisci nulla! Lorem ipsum dolor sit
-                amet consectetur adipisicing elit. Impedit iste aspernatur,
-                exercitationem optio a quae sapiente illum nemo. Natus esse
-                accusantium quis architecto ut blanditiis laudantium maiores,
-                vero consectetur assumenda.
-              </h1>
+              <h1>{game.description}</h1>
             </div>
           </div>
         </div>
@@ -107,12 +118,12 @@ export default function Game() {
         <div className="flex scale-90 justify-center">
           <iframe
             frameBorder="0"
-            src="https://itch.io/embed-upload/10893715?color=333333"
+            src={game.game}
             allowfullscreen=""
             width="900"
             height="550"
           >
-            <a href="https://alzee23.itch.io/cima">Play Cima on itch.io</a>
+            {/* <a href="https://alzee23.itch.io/cima">Play Cima on itch.io</a> */}
           </iframe>
         </div>
       </section>

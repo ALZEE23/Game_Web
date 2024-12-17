@@ -1,13 +1,14 @@
 import axios from 'axios';
 import Cookies from 'js-cookie';
-import { API_URL } from '../../.env';
+
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 const Api = axios.create({
   baseURL: API_URL,
   headers: {
     Accept: "application/json",
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   },
 });
 
