@@ -118,27 +118,27 @@ export default function Landing() {
         </div>
       </section>
       <section id="game">
-        <div className="relative ">
+        <div className="relative mt-40">
           <div className="sm:grid-cols-2 gap-8 grid sm:px-40 px-5 w-screen mb-56 ">
             {games.map((game) => (
               <div
                 key={game.ID}
-                className="bg-white inline-block space-y-3 h-96 pb-10 sm:h-auto"
+                className="bg-[#21201F] inline-block space-y-3 h-96 pb-10 sm:h-auto"
                 onClick={() => handleCardClick(game)}
               >
                 <div className="w-full h-[15rem] sm:h-[26rem] bg-[#21201F]">
                   <img
-                    src={`http://localhost:3000${game.cover}`}
+                    src={`http://localhost:3000/${game.cover}`}
                     alt={game.title}
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
-                  <h1 className="font-mono font-semibold text-xl text-center">
-                    {game.title}
+                  <h1 className="font-mono font-semibold text-xl text-center text-[#DFDFF2]">
+                    {game.name}
                   </h1>
-                  <h1 className="text-center font-semibold">
-                    {game.description}
+                  <h1 className="text-center font-semibold text-[#DFDFF2]">
+                    {game.title}
                   </h1>
                 </div>
               </div>

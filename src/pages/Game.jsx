@@ -1,4 +1,4 @@
-import CarouselPhoto from "../component/CarouselPhoto";
+// import CarouselPhoto from "../component/CarouselPhoto";
 import { BiMenu } from "react-icons/bi";
 import { useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
@@ -83,29 +83,37 @@ export default function Game() {
       </section>
 
       <section id="banner">
-        <div className="w-screen h-72 bg-black">
-          <img src="" alt="" />
+        <div className="w-full h-72 bg-black overflow-hidden">
+          <img
+            src={`http://localhost:3000/${game.cover}`}
+            alt=""
+            className="-z-30 w-full h-full object-cover"
+          />
         </div>
       </section>
 
       <section id="image">
-        <div className="md:px-40 space-y-10 py-10 px-3">
+        <div className="md:px-40 space-y-10 py-10 px-5">
           <div className="flex-col">
-            <h1 className="font-staatliches text-lg">
+            <h1 className="font-staatliches text-lg text-[#21201F]">
               {game.name} - {dateOnly}
             </h1>
-            <h1 className="font-staatliches text-5xl">{game.title}</h1>
+            <h1 className="font-staatliches text-5xl text-[#21201F]">
+              {game.title}
+            </h1>
           </div>
-          <div className="md:h-screen w-full h-64 bg-black">
+          <div className="md:h-screen w-full h-64 bg-[#21201F]">
             <img
-              src={`http://localhost:3000${game.cover}`}
+              src={`http://localhost:3000/${game.cover}`}
               alt={game.title}
               className="w-full h-full object-cover"
             />
           </div>
           <div className="md:px-64 space-y-5">
             <div className="inline-block space-y-1">
-              <h1 className="font-semibold text-xl italic">{game.title}</h1>
+              <h1 className="font-semibold text-xl italic text-[#21201F]">
+                {game.title}
+              </h1>
             </div>
             <div>
               <h1>{game.description}</h1>
@@ -129,21 +137,15 @@ export default function Game() {
       </section>
 
       <section>
-        <div className="md:px-40 space-y-10 pb-20">
+        <div className="md:px-40 space-y-10 px-5 pb-20">
           <div className="md:px-64">
-            <h1>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat
-              assumenda laudantium nam quaerat et nostrum iusto cumque aut,
-              vitae est laborum sed unde quae, qui possimus veritatis delectus?
-              Quas vitae tenetur aperiam dolor consequuntur eligendi eum nam
-              accusantium, sit itaque.
-            </h1>
+            <h1>{game.creator}</h1>
           </div>
-          <div className="w-full h-[40%] flex justify-center">
+          {/* <div className="w-full h-[40%] flex justify-center">
             <div className="w-[54%]">
               <CarouselPhoto />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       <section id="contact">
